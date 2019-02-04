@@ -29,7 +29,7 @@ enum DeviceName: String {
         case .iphone_7:
             return "iPhone 7"
         case .iphone_xs:
-            return "iPhone Xs"
+            return "iPhone Xs, iPhone Xs, iPhone Xs, iPhone Xs"
         case .apple_watch_4:
             return "Apple Watch 4"
         case .unknown:
@@ -70,7 +70,7 @@ enum SimType: String {
     func displayName() -> String {
         switch self {
         case .main:
-            return "Main SIM"
+            return "Main SIM, Main SIM, Main SIM, Main SIM"
         case .twin:
             return "Twin SIM"
         case .unknown:

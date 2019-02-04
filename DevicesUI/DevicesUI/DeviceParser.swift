@@ -38,6 +38,118 @@ class DeviceParser {
             "type": "PHONE",
             "simType": "TWIN",
             "swap": false
+        ],
+        [
+            "name": "iphone 7",
+            "blocked": false,
+            "type": "PHONE",
+            "simType": "MAIN",
+            "swap": true
+        ],
+        [
+            "name": "iphone xs",
+            "blocked": false,
+            "type": "PHONE",
+            "simType": "MAIN",
+            "swap": true
+        ],
+        [
+            "name": "apple watch 4",
+            "blocked": false,
+            "type": "WATCH",
+            "simType": "MAIN",
+            "swap": false
+        ],
+        [
+            "name": "iphone 5s",
+            "blocked": true,
+            "type": "PHONE",
+            "simType": "TWIN",
+            "swap": false
+        ],
+        [
+            "name": "iphone 7",
+            "blocked": false,
+            "type": "PHONE",
+            "simType": "MAIN",
+            "swap": true
+        ],
+        [
+            "name": "iphone xs",
+            "blocked": false,
+            "type": "PHONE",
+            "simType": "MAIN",
+            "swap": true
+        ],
+        [
+            "name": "apple watch 4",
+            "blocked": false,
+            "type": "WATCH",
+            "simType": "MAIN",
+            "swap": false
+        ],
+        [
+            "name": "iphone 5s",
+            "blocked": true,
+            "type": "PHONE",
+            "simType": "TWIN",
+            "swap": false
+        ],
+        [
+            "name": "iphone 7",
+            "blocked": false,
+            "type": "PHONE",
+            "simType": "MAIN",
+            "swap": true
+        ],
+        [
+            "name": "iphone xs",
+            "blocked": false,
+            "type": "PHONE",
+            "simType": "MAIN",
+            "swap": true
+        ],
+        [
+            "name": "apple watch 4",
+            "blocked": false,
+            "type": "WATCH",
+            "simType": "MAIN",
+            "swap": false
+        ],
+        [
+            "name": "iphone 5s",
+            "blocked": true,
+            "type": "PHONE",
+            "simType": "TWIN",
+            "swap": false
+        ],
+        [
+            "name": "iphone 7",
+            "blocked": false,
+            "type": "PHONE",
+            "simType": "MAIN",
+            "swap": true
+        ],
+        [
+            "name": "iphone xs",
+            "blocked": false,
+            "type": "PHONE",
+            "simType": "MAIN",
+            "swap": true
+        ],
+        [
+            "name": "apple watch 4",
+            "blocked": false,
+            "type": "WATCH",
+            "simType": "MAIN",
+            "swap": false
+        ],
+        [
+            "name": "iphone 5s",
+            "blocked": true,
+            "type": "PHONE",
+            "simType": "TWIN",
+            "swap": false
         ]
     ]
     

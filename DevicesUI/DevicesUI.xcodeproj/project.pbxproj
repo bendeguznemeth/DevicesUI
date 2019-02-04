@@ -16,6 +16,7 @@
 		EDE6DCA82202E66000347D76 /* DeviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE6DCA72202E66000347D76 /* DeviceTableViewCell.swift */; };
 		EDE6DCAE2203141800347D76 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE6DCAD2203141800347D76 /* Device.swift */; };
 		EDE6DCB022031B4200347D76 /* DeviceParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE6DCAF22031B4200347D76 /* DeviceParser.swift */; };
+		EDE6DCB32208360A00347D76 /* SwapButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE6DCB22208360A00347D76 /* SwapButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		EDE6DCA72202E66000347D76 /* DeviceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTableViewCell.swift; sourceTree = "<group>"; };
 		EDE6DCAD2203141800347D76 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		EDE6DCAF22031B4200347D76 /* DeviceParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceParser.swift; sourceTree = "<group>"; };
+		EDE6DCB22208360A00347D76 /* SwapButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				EDE6DCAF22031B4200347D76 /* DeviceParser.swift */,
 				EDE6DCAD2203141800347D76 /* Device.swift */,
 				EDE6DCA72202E66000347D76 /* DeviceTableViewCell.swift */,
+				EDE6DCB22208360A00347D76 /* SwapButton.swift */,
 				EDCB56562202D91C0014EB3B /* Assets.xcassets */,
 				EDE6DCB12203362A00347D76 /* Supporting Files */,
 			);
@@ -229,6 +232,7 @@
 				EDE6DCA82202E66000347D76 /* DeviceTableViewCell.swift in Sources */,
 				EDE6DCB022031B4200347D76 /* DeviceParser.swift in Sources */,
 				EDCB56502202D91A0014EB3B /* AppDelegate.swift in Sources */,
+				EDE6DCB32208360A00347D76 /* SwapButton.swift in Sources */,
 				EDE6DCAE2203141800347D76 /* Device.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

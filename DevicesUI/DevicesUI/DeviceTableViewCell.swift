@@ -37,25 +37,20 @@ class DeviceTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         self.innerView.layer.cornerRadius = 15
-        self.swapButton.layer.cornerRadius = 20
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     func displayContent(_ content: DeviceTableViewCellContent) {
         self.deviceImageView.image = UIImage(named: content.deviceImageName)
+        
         self.nameLabel.text = content.name
         self.simTypeLabel.text = content.simType
         self.blockedLabel.text = content.blocked
         
-        if !content.swap {
-            self.swapButton.isHidden = true
-        }
+        self.swapButton.isHidden = !content.swap
     }
 }
