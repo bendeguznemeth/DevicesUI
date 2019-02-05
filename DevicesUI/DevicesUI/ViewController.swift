@@ -24,7 +24,6 @@ class ViewController: UIViewController {
         self.devicesTableView.delegate = self
         
         self.getDevices()
-        
     }
     
     private func getDevices() {
@@ -102,16 +101,16 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
-        func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-            switch section {
-            case 0:
-                return "iPhones"
-            case 1:
-                return "Apple Watches"
-            default:
-                return nil
-            }
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch section {
+        case 0:
+            return ""
+        case 1:
+            return ""
+        default:
+            return nil
         }
+    }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 80
@@ -128,8 +127,8 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         default:
             break
         }
-                
+        
         header.tintColor = UIColor.clear
-        header.textLabel?.font = UIFont.boldSystemFont(ofSize: 24)
+        header.textLabel?.font = UIFont.systemFont(ofSize: 24, weight: .light)
     }
 }
