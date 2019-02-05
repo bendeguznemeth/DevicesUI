@@ -41,8 +41,8 @@
                                                                     <rect key="frame" x="0.0" y="11" width="60" height="60"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="width" constant="60" id="2gY-Dh-LN5"/>
                                                                         <constraint firstAttribute="height" constant="60" id="9X3-4H-84I"/>
+                                                                        <constraint firstAttribute="width" secondItem="5qU-po-hmX" secondAttribute="height" multiplier="1:1" id="zcQ-0q-ZhO"/>
                                                                     </constraints>
                                                                 </imageView>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="LzW-KZ-uM2">

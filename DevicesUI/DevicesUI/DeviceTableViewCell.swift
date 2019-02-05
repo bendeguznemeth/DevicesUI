@@ -8,14 +8,6 @@
 
 import UIKit
 
-//struct ViewContent {
-//    let sections: [Section]
-//
-//    struct Section {
-//        let Rows: [DeviceTableViewCellContent]
-//    }
-//}
-
 struct DeviceTableViewCellContent {
     
     let deviceImageName: String

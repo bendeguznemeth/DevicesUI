@@ -44,7 +44,7 @@
             <connections>
                 <outlet property="sectionHeaderLabel" destination="fZh-S3-ScG" id="WzM-JC-KGd"/>
             </connections>
-            <point key="canvasLocation" x="60" y="-404.34782608695656"/>
+            <point key="canvasLocation" x="24.800000000000001" y="-640.92953523238384"/>
         </view>
     </objects>
 </document>

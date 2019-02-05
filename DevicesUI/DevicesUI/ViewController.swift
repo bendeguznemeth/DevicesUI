@@ -10,12 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    enum Section: Int {
+        case phone
+        case watch
+        
+        static let numberOfSections = 2
+    }
+    
     @IBOutlet weak var devicesTableView: UITableView!
     
-    //    var viewContent: ViewContent
-    
-    var phones = [DeviceTableViewCellContent]()
-    var watches = [DeviceTableViewCellContent]()
+    var viewContent: ViewContent?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,19 +30,29 @@ class ViewController: UIViewController {
         let nib = UINib(nibName: "CustomHeaderView", bundle: nil)
         self.devicesTableView.register(nib, forHeaderFooterViewReuseIdentifier: "CustomHeaderView")
         
-        self.getDevices()
+        self.loadViewContent()
     }
     
-    private func getDevices() {
+    private func loadViewContent() {
         let devices = DeviceParser.getDevices()
         
-        phones = devices.filter({ $0.type == .phone }).compactMap({ (device) -> DeviceTableViewCellContent in
-            return self.getCellContent(from: device)
-        })
+        let phonesSection = { () -> ViewContent.Section<DeviceTableViewCellContent> in
+            let rows = devices.filter({ $0.type == .phone }).compactMap({ (device) -> DeviceTableViewCellContent in
+                return self.getCellContent(from: device)
+            })
+            
+            return ViewContent.Section<DeviceTableViewCellContent>.init(header: "iPhones", rows: rows)
+        }()
         
-        watches = devices.filter({ $0.type == .watch }).compactMap({ (device) -> DeviceTableViewCellContent in
-            return self.getCellContent(from: device)
-        })
+        let watchesSection = { () -> ViewContent.Section<DeviceTableViewCellContent> in
+            let rows = devices.filter({ $0.type == .watch }).compactMap({ (device) -> DeviceTableViewCellContent in
+                return self.getCellContent(from: device)
+            })
+            
+            return ViewContent.Section<DeviceTableViewCellContent>.init(header: "Apple Watches", rows: rows)
+        }()
+        
+        self.viewContent = ViewContent.init(phones: phonesSection, watches: watchesSection)
     }
     
     private func getCellContent(from device: Device) -> DeviceTableViewCellContent {
@@ -73,32 +87,34 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return Section.numberOfSections
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch section {
-        case 0:
-            return phones.count
-        case 1:
-            return watches.count
-        default:
+        guard let section = Section.init(rawValue: section), let content = self.viewContent else {
             return 0
+        }
+        
+        switch section {
+        case .phone:
+            return content.phones.rows.count
+        case .watch:
+            return content.watches.rows.count
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "DeviceTableViewCell") as? DeviceTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "DeviceTableViewCell") as? DeviceTableViewCell,
+            let section = Section.init(rawValue: indexPath.section),
+            let content = self.viewContent else {
             return UITableViewCell()
         }
         
-        switch indexPath.section {
-        case 0:
-            cell.displayContent(phones[indexPath.row])
-        case 1:
-            cell.displayContent(watches[indexPath.row])
-        default:
-            break
+        switch section {
+        case .phone:
+            cell.displayContent(content.phones.rows[indexPath.row])
+        case .watch:
+            cell.displayContent(content.watches.rows[indexPath.row])
         }
         
         return cell
@@ -109,17 +125,17 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "CustomHeaderView") as? CustomSectionHeaderView else {
+        guard let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "CustomHeaderView") as? CustomSectionHeaderView,
+            let section = Section.init(rawValue: section),
+            let content = self.viewContent else {
             return nil
         }
         
         switch section {
-        case 0:
-            header.sectionHeaderLabel.text = "iPhones"
-        case 1:
-            header.sectionHeaderLabel.text = "Apple Watches"
-        default:
-            break
+        case .phone:
+            header.sectionHeaderLabel.text = content.phones.header
+        case .watch:
+            header.sectionHeaderLabel.text = content.watches.header
         }
         
         return header
