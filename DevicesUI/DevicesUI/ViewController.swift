@@ -23,6 +23,9 @@ class ViewController: UIViewController {
         self.devicesTableView.dataSource = self
         self.devicesTableView.delegate = self
         
+        let nib = UINib(nibName: "CustomHeaderView", bundle: nil)
+        self.devicesTableView.register(nib, forHeaderFooterViewReuseIdentifier: "CustomHeaderView")
+        
         self.getDevices()
     }
     
@@ -101,34 +104,24 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        switch section {
-        case 0:
-            return ""
-        case 1:
-            return ""
-        default:
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 75
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "CustomHeaderView") as? CustomSectionHeaderView else {
             return nil
         }
-    }
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 80
-    }
-    
-    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        guard let header = view as? UITableViewHeaderFooterView else { return }
         
         switch section {
         case 0:
-            header.textLabel?.text = "iPhones"
+            header.sectionHeaderLabel.text = "iPhones"
         case 1:
-            header.textLabel?.text = "Apple Watches"
+            header.sectionHeaderLabel.text = "Apple Watches"
         default:
             break
         }
         
-        header.tintColor = UIColor.clear
-        header.textLabel?.font = UIFont.systemFont(ofSize: 24, weight: .light)
+        return header
     }
 }

@@ -17,6 +17,8 @@
 		EDE6DCAE2203141800347D76 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE6DCAD2203141800347D76 /* Device.swift */; };
 		EDE6DCB022031B4200347D76 /* DeviceParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE6DCAF22031B4200347D76 /* DeviceParser.swift */; };
 		EDE6DCB32208360A00347D76 /* SwapButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE6DCB22208360A00347D76 /* SwapButton.swift */; };
+		EDE6DCB522098DC300347D76 /* CustomHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDE6DCB422098DC300347D76 /* CustomHeaderView.xib */; };
+		EDE6DCB722098E2200347D76 /* CustomSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE6DCB622098E2200347D76 /* CustomSectionHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		EDE6DCAD2203141800347D76 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		EDE6DCAF22031B4200347D76 /* DeviceParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceParser.swift; sourceTree = "<group>"; };
 		EDE6DCB22208360A00347D76 /* SwapButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapButton.swift; sourceTree = "<group>"; };
+		EDE6DCB422098DC300347D76 /* CustomHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomHeaderView.xib; sourceTree = "<group>"; };
+		EDE6DCB622098E2200347D76 /* CustomSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSectionHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,8 @@
 			isa = PBXGroup;
 			children = (
 				EDCB56532202D91A0014EB3B /* Main.storyboard */,
+				EDE6DCB422098DC300347D76 /* CustomHeaderView.xib */,
+				EDE6DCB622098E2200347D76 /* CustomSectionHeaderView.swift */,
 				EDCB56512202D91A0014EB3B /* ViewController.swift */,
 				EDE6DCAF22031B4200347D76 /* DeviceParser.swift */,
 				EDE6DCAD2203141800347D76 /* Device.swift */,
@@ -168,6 +174,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDE6DCB522098DC300347D76 /* CustomHeaderView.xib in Resources */,
 				EDCB565A2202D91C0014EB3B /* LaunchScreen.storyboard in Resources */,
 				EDCB56572202D91C0014EB3B /* Assets.xcassets in Resources */,
 				EDCB56552202D91A0014EB3B /* Main.storyboard in Resources */,
@@ -229,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDCB56522202D91A0014EB3B /* ViewController.swift in Sources */,
+				EDE6DCB722098E2200347D76 /* CustomSectionHeaderView.swift in Sources */,
 				EDE6DCA82202E66000347D76 /* DeviceTableViewCell.swift in Sources */,
 				EDE6DCB022031B4200347D76 /* DeviceParser.swift in Sources */,
 				EDCB56502202D91A0014EB3B /* AppDelegate.swift in Sources */,

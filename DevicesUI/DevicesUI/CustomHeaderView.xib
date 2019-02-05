@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CustomSectionHeaderView" customModule="DevicesUI" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tpS-Re-rWE">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Section Header Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZh-S3-ScG">
+                            <rect key="frame" x="25" y="23" width="218" height="29"/>
+                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="fZh-S3-ScG" firstAttribute="centerY" secondItem="tpS-Re-rWE" secondAttribute="centerY" id="pCg-wZ-Jgt"/>
+                        <constraint firstItem="fZh-S3-ScG" firstAttribute="leading" secondItem="tpS-Re-rWE" secondAttribute="leading" constant="25" id="wHZ-xS-zZl"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="tpS-Re-rWE" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Hy6-hE-Q05"/>
+                <constraint firstItem="tpS-Re-rWE" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="KUd-Fh-c3a"/>
+                <constraint firstItem="tpS-Re-rWE" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="nDU-SN-qAm"/>
+                <constraint firstItem="tpS-Re-rWE" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="rOR-dv-yLL"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="sectionHeaderLabel" destination="fZh-S3-ScG" id="WzM-JC-KGd"/>
+            </connections>
+            <point key="canvasLocation" x="60" y="-404.34782608695656"/>
+        </view>
+    </objects>
+</document>
