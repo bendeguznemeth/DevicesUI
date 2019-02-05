@@ -33,7 +33,7 @@ enum DeviceName: String {
         case .apple_watch_4:
             return "Apple Watch 4"
         case .unknown:
-            return "Unknown"
+            return ""
         }
     }
 }
@@ -74,7 +74,7 @@ enum SimType: String {
         case .twin:
             return "Twin SIM"
         case .unknown:
-            return "Unknown"
+            return ""
         }
     }
 }

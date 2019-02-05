@@ -45,7 +45,12 @@ class DeviceTableViewCell: UITableViewCell {
     }
     
     func displayContent(_ content: DeviceTableViewCellContent) {
-        self.deviceImageView.image = UIImage(named: content.deviceImageName)
+        if let image = UIImage(named: content.deviceImageName) {
+            self.deviceImageView.isHidden = false
+            self.deviceImageView.image = image
+        } else {
+            self.deviceImageView.isHidden = true
+        }
         
         self.nameLabel.text = content.name
         self.simTypeLabel.text = content.simType

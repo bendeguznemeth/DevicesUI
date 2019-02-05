@@ -26,6 +26,13 @@ class DeviceParser {
             "swap": true
         ],
         [
+            "name": "",
+            "blocked": false,
+            "type": "PHONE",
+            "simType": "",
+            "swap": true
+        ],
+        [
             "name": "apple watch 4",
             "blocked": false,
             "type": "WATCH",
