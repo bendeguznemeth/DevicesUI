@@ -20,6 +20,7 @@
 		EDE6DCB522098DC300347D76 /* CustomHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDE6DCB422098DC300347D76 /* CustomHeaderView.xib */; };
 		EDE6DCB722098E2200347D76 /* CustomSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE6DCB622098E2200347D76 /* CustomSectionHeaderView.swift */; };
 		EDE6DCB92209B94C00347D76 /* ViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE6DCB82209B94C00347D76 /* ViewContent.swift */; };
+		EDE6DCBB220ABF1E00347D76 /* DeviceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDE6DCBA220ABF1E00347D76 /* DeviceTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		EDE6DCB422098DC300347D76 /* CustomHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomHeaderView.xib; sourceTree = "<group>"; };
 		EDE6DCB622098E2200347D76 /* CustomSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSectionHeaderView.swift; sourceTree = "<group>"; };
 		EDE6DCB82209B94C00347D76 /* ViewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewContent.swift; sourceTree = "<group>"; };
+		EDE6DCBA220ABF1E00347D76 /* DeviceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeviceTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 			children = (
 				EDCB56532202D91A0014EB3B /* Main.storyboard */,
 				EDE6DCB422098DC300347D76 /* CustomHeaderView.xib */,
+				EDE6DCBA220ABF1E00347D76 /* DeviceTableViewCell.xib */,
 				EDE6DCB622098E2200347D76 /* CustomSectionHeaderView.swift */,
 				EDCB56512202D91A0014EB3B /* ViewController.swift */,
 				EDE6DCB82209B94C00347D76 /* ViewContent.swift */,
@@ -181,6 +184,7 @@
 				EDCB565A2202D91C0014EB3B /* LaunchScreen.storyboard in Resources */,
 				EDCB56572202D91C0014EB3B /* Assets.xcassets in Resources */,
 				EDCB56552202D91A0014EB3B /* Main.storyboard in Resources */,
+				EDE6DCBB220ABF1E00347D76 /* DeviceTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

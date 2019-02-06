@@ -23,94 +23,6 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DeviceTableViewCell" rowHeight="142" id="irW-qc-CUf" customClass="DeviceTableViewCell" customModule="DevicesUI" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="55.5" width="375" height="142"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="irW-qc-CUf" id="9r9-3I-zDd">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="142"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EFF-Eb-kS8">
-                                                    <rect key="frame" x="15" y="10" width="345" height="122"/>
-                                                    <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="MW2-mh-m4Q">
-                                                            <rect key="frame" x="20" y="20" width="305" height="82"/>
-                                                            <subviews>
-                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iphone_7" translatesAutoresizingMaskIntoConstraints="NO" id="5qU-po-hmX">
-                                                                    <rect key="frame" x="0.0" y="11" width="60" height="60"/>
-                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="60" id="9X3-4H-84I"/>
-                                                                        <constraint firstAttribute="width" secondItem="5qU-po-hmX" secondAttribute="height" multiplier="1:1" id="zcQ-0q-ZhO"/>
-                                                                    </constraints>
-                                                                </imageView>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="LzW-KZ-uM2">
-                                                                    <rect key="frame" x="68" y="6" width="149" height="70.5"/>
-                                                                    <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eeW-21-fRm">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="149" height="21.5"/>
-                                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
-                                                                            <nil key="textColor"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="simType" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S2b-F4-HGP">
-                                                                            <rect key="frame" x="0.0" y="26.5" width="149" height="19.5"/>
-                                                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
-                                                                            <nil key="textColor"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="blocked" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7yI-gk-8cY">
-                                                                            <rect key="frame" x="0.0" y="51" width="149" height="19.5"/>
-                                                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
-                                                                            <nil key="textColor"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                    </subviews>
-                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                </stackView>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJ9-49-tiq" customClass="SwapButton" customModule="DevicesUI" customModuleProvider="target">
-                                                                    <rect key="frame" x="225" y="21" width="80" height="40"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="width" constant="80" id="O2k-0d-aaS"/>
-                                                                        <constraint firstAttribute="height" constant="40" id="VRK-TU-bvT"/>
-                                                                    </constraints>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                                    <state key="normal" title="SWAP">
-                                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    </state>
-                                                                </button>
-                                                            </subviews>
-                                                            <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </stackView>
-                                                    </subviews>
-                                                    <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <constraints>
-                                                        <constraint firstItem="MW2-mh-m4Q" firstAttribute="top" secondItem="EFF-Eb-kS8" secondAttribute="top" constant="20" id="VeY-ZJ-3WX"/>
-                                                        <constraint firstItem="MW2-mh-m4Q" firstAttribute="leading" secondItem="EFF-Eb-kS8" secondAttribute="leading" constant="20" id="elm-IR-65p"/>
-                                                        <constraint firstAttribute="bottom" secondItem="MW2-mh-m4Q" secondAttribute="bottom" constant="20" id="faP-Rt-sQP"/>
-                                                        <constraint firstAttribute="trailing" secondItem="MW2-mh-m4Q" secondAttribute="trailing" constant="20" id="mOU-R9-S0o"/>
-                                                    </constraints>
-                                                </view>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="EFF-Eb-kS8" secondAttribute="bottom" constant="10" id="EFx-MX-CPv"/>
-                                                <constraint firstItem="EFF-Eb-kS8" firstAttribute="top" secondItem="9r9-3I-zDd" secondAttribute="top" constant="10" id="PZD-5r-E9C"/>
-                                                <constraint firstItem="EFF-Eb-kS8" firstAttribute="leading" secondItem="9r9-3I-zDd" secondAttribute="leading" constant="15" id="fta-s8-YeR"/>
-                                                <constraint firstAttribute="trailing" secondItem="EFF-Eb-kS8" secondAttribute="trailing" constant="15" id="ph4-iQ-xdk"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="blockedLabel" destination="7yI-gk-8cY" id="9Hz-5B-bco"/>
-                                            <outlet property="deviceImageView" destination="5qU-po-hmX" id="AxB-tc-PEy"/>
-                                            <outlet property="innerView" destination="EFF-Eb-kS8" id="Hsx-Pz-Gua"/>
-                                            <outlet property="nameLabel" destination="eeW-21-fRm" id="IZd-xO-Ics"/>
-                                            <outlet property="simTypeLabel" destination="S2b-F4-HGP" id="X3X-h2-F59"/>
-                                            <outlet property="swapButton" destination="hJ9-49-tiq" id="meL-S9-LfZ"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
                                 <sections/>
                             </tableView>
                         </subviews>
@@ -132,7 +44,4 @@
             <point key="canvasLocation" x="53.600000000000001" y="26.53673163418291"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="iphone_7" width="430" height="430"/>
-    </resources>
 </document>

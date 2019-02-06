@@ -27,8 +27,11 @@ class ViewController: UIViewController {
         self.devicesTableView.dataSource = self
         self.devicesTableView.delegate = self
         
-        let nib = UINib(nibName: "CustomHeaderView", bundle: nil)
-        self.devicesTableView.register(nib, forHeaderFooterViewReuseIdentifier: "CustomHeaderView")
+        let headerNib = UINib(nibName: "CustomHeaderView", bundle: nil)
+        self.devicesTableView.register(headerNib, forHeaderFooterViewReuseIdentifier: "CustomHeaderView")
+        
+        let cellNib = UINib(nibName: "DeviceTableViewCell", bundle: nil)
+        self.devicesTableView.register(cellNib, forCellReuseIdentifier: "DeviceTableViewCell")
         
         self.loadViewContent()
     }
