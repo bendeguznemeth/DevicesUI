@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol DeviceCellDelegate {
+    func didTapSwap(stringToPresent: String?)
+}
+
 struct DeviceTableViewCellContent {
     
     let deviceImageName: String
@@ -27,9 +31,12 @@ class DeviceTableViewCell: UITableViewCell {
     @IBOutlet weak var blockedLabel: UILabel!
     @IBOutlet weak var innerView: UIView!
     
+    var delegate: DeviceCellDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         self.innerView.layer.cornerRadius = 15
+        self.selectionStyle = .none
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -49,5 +56,9 @@ class DeviceTableViewCell: UITableViewCell {
         self.blockedLabel.text = content.blocked
         
         self.swapButton.isHidden = !content.swap
+    }
+    
+    @IBAction func swapTapped(_ sender: UIButton) {
+        self.delegate?.didTapSwap(stringToPresent: self.swapButton.titleLabel?.text)
     }
 }

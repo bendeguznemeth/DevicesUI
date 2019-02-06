@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0B2571326AAB5D39C28803A6 /* Pods_DevicesUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24ADB92293296A62319301CB /* Pods_DevicesUI.framework */; };
 		EDCB56502202D91A0014EB3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCB564F2202D91A0014EB3B /* AppDelegate.swift */; };
-		EDCB56522202D91A0014EB3B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCB56512202D91A0014EB3B /* ViewController.swift */; };
+		EDCB56522202D91A0014EB3B /* DevicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCB56512202D91A0014EB3B /* DevicesViewController.swift */; };
 		EDCB56552202D91A0014EB3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDCB56532202D91A0014EB3B /* Main.storyboard */; };
 		EDCB56572202D91C0014EB3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDCB56562202D91C0014EB3B /* Assets.xcassets */; };
 		EDCB565A2202D91C0014EB3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDCB56582202D91C0014EB3B /* LaunchScreen.storyboard */; };
@@ -21,6 +21,7 @@
 		EDE6DCB722098E2200347D76 /* CustomSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE6DCB622098E2200347D76 /* CustomSectionHeaderView.swift */; };
 		EDE6DCB92209B94C00347D76 /* ViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE6DCB82209B94C00347D76 /* ViewContent.swift */; };
 		EDE6DCBB220ABF1E00347D76 /* DeviceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDE6DCBA220ABF1E00347D76 /* DeviceTableViewCell.xib */; };
+		EDE6DCBD220AFBFA00347D76 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE6DCBC220AFBFA00347D76 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +30,7 @@
 		7967E69559320313FFC02FD4 /* Pods-DevicesUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevicesUI.release.xcconfig"; path = "Pods/Target Support Files/Pods-DevicesUI/Pods-DevicesUI.release.xcconfig"; sourceTree = "<group>"; };
 		EDCB564C2202D91A0014EB3B /* DevicesUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DevicesUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDCB564F2202D91A0014EB3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EDCB56512202D91A0014EB3B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EDCB56512202D91A0014EB3B /* DevicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesViewController.swift; sourceTree = "<group>"; };
 		EDCB56542202D91A0014EB3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EDCB56562202D91C0014EB3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDCB56592202D91C0014EB3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -42,6 +43,7 @@
 		EDE6DCB622098E2200347D76 /* CustomSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSectionHeaderView.swift; sourceTree = "<group>"; };
 		EDE6DCB82209B94C00347D76 /* ViewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewContent.swift; sourceTree = "<group>"; };
 		EDE6DCBA220ABF1E00347D76 /* DeviceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeviceTableViewCell.xib; sourceTree = "<group>"; };
+		EDE6DCBC220AFBFA00347D76 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +100,8 @@
 				EDE6DCB422098DC300347D76 /* CustomHeaderView.xib */,
 				EDE6DCBA220ABF1E00347D76 /* DeviceTableViewCell.xib */,
 				EDE6DCB622098E2200347D76 /* CustomSectionHeaderView.swift */,
-				EDCB56512202D91A0014EB3B /* ViewController.swift */,
+				EDCB56512202D91A0014EB3B /* DevicesViewController.swift */,
+				EDE6DCBC220AFBFA00347D76 /* DetailViewController.swift */,
 				EDE6DCB82209B94C00347D76 /* ViewContent.swift */,
 				EDE6DCAF22031B4200347D76 /* DeviceParser.swift */,
 				EDE6DCAD2203141800347D76 /* Device.swift */,
@@ -242,7 +245,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDCB56522202D91A0014EB3B /* ViewController.swift in Sources */,
+				EDE6DCBD220AFBFA00347D76 /* DetailViewController.swift in Sources */,
+				EDCB56522202D91A0014EB3B /* DevicesViewController.swift in Sources */,
 				EDE6DCB722098E2200347D76 /* CustomSectionHeaderView.swift in Sources */,
 				EDE6DCB92209B94C00347D76 /* ViewContent.swift in Sources */,
 				EDE6DCA82202E66000347D76 /* DeviceTableViewCell.swift in Sources */,

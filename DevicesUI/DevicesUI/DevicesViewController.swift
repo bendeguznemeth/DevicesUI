@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class DevicesViewController: UIViewController {
     
     enum Section: Int {
         case phone
@@ -85,9 +85,25 @@ class ViewController: UIViewController {
         }
     }
     
+    private func pushDetailVC(with stringToPresent: String?) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let detailViewController = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController else {
+            fatalError("DetailViewController cannot be instantiated")
+        }
+        
+        detailViewController.stringToPresent = stringToPresent
+        
+        self.navigationController?.pushViewController(detailViewController, animated: true)
+    }
 }
 
-extension ViewController: UITableViewDataSource, UITableViewDelegate {
+extension DevicesViewController: DeviceCellDelegate {
+    func didTapSwap(stringToPresent: String?) {
+        pushDetailVC(with: stringToPresent)
+    }
+}
+
+extension DevicesViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return Section.numberOfSections
@@ -112,6 +128,8 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             let content = self.viewContent else {
             return UITableViewCell()
         }
+        
+        cell.delegate = self
         
         switch section {
         case .phone:
@@ -142,5 +160,23 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         }
         
         return header
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let section = Section.init(rawValue: indexPath.section),
+            let content = self.viewContent else {
+            return
+        }
+        
+        var stringToPresent: String?
+        
+        switch section {
+        case .phone:
+            stringToPresent = content.phones.rows[indexPath.row].name
+        case .watch:
+            stringToPresent = content.watches.rows[indexPath.row].name
+        }
+        
+        self.pushDetailVC(with: stringToPresent)
     }
 }
