@@ -42,17 +42,6 @@ class DevicesViewController: UIViewController {
         let appleLogoImage = UIImage(named: "apple_logo")
         let appleLogoImageView = UIImageView(image: appleLogoImage)
         
-        guard let bannerWidth = self.navigationController?.navigationBar.frame.size.width,
-            let bannerHeight = self.navigationController?.navigationBar.frame.size.height,
-            let imageW = appleLogoImage?.size.width,
-            let imageH = appleLogoImage?.size.width else {
-                return
-        }
-        
-        let bannerX = bannerWidth / 2 - imageW / 2
-        let bannerY = bannerHeight / 2 - imageH / 2
-        
-        appleLogoImageView.frame = CGRect(x: bannerX, y: bannerY, width: bannerWidth, height: bannerHeight)
         appleLogoImageView.contentMode = .scaleAspectFit
         
         self.navigationItem.titleView = appleLogoImageView

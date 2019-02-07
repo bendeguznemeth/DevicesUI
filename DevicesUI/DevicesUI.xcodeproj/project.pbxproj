@@ -11,7 +11,6 @@
 		EDCB56502202D91A0014EB3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCB564F2202D91A0014EB3B /* AppDelegate.swift */; };
 		EDCB56522202D91A0014EB3B /* DevicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCB56512202D91A0014EB3B /* DevicesViewController.swift */; };
 		EDCB56552202D91A0014EB3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDCB56532202D91A0014EB3B /* Main.storyboard */; };
-		EDCB56572202D91C0014EB3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDCB56562202D91C0014EB3B /* Assets.xcassets */; };
 		EDCB565A2202D91C0014EB3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDCB56582202D91C0014EB3B /* LaunchScreen.storyboard */; };
 		EDE6DCA82202E66000347D76 /* DeviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE6DCA72202E66000347D76 /* DeviceTableViewCell.swift */; };
 		EDE6DCAE2203141800347D76 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE6DCAD2203141800347D76 /* Device.swift */; };
@@ -22,6 +21,7 @@
 		EDE6DCB92209B94C00347D76 /* ViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE6DCB82209B94C00347D76 /* ViewContent.swift */; };
 		EDE6DCBB220ABF1E00347D76 /* DeviceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDE6DCBA220ABF1E00347D76 /* DeviceTableViewCell.xib */; };
 		EDE6DCBD220AFBFA00347D76 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE6DCBC220AFBFA00347D76 /* DetailViewController.swift */; };
+		EDE6DCBF220C453100347D76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDE6DCBE220C453100347D76 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +32,6 @@
 		EDCB564F2202D91A0014EB3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDCB56512202D91A0014EB3B /* DevicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesViewController.swift; sourceTree = "<group>"; };
 		EDCB56542202D91A0014EB3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		EDCB56562202D91C0014EB3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDCB56592202D91C0014EB3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EDCB565B2202D91C0014EB3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDE6DCA72202E66000347D76 /* DeviceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTableViewCell.swift; sourceTree = "<group>"; };
@@ -44,6 +43,7 @@
 		EDE6DCB82209B94C00347D76 /* ViewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewContent.swift; sourceTree = "<group>"; };
 		EDE6DCBA220ABF1E00347D76 /* DeviceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeviceTableViewCell.xib; sourceTree = "<group>"; };
 		EDE6DCBC220AFBFA00347D76 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		EDE6DCBE220C453100347D76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +107,7 @@
 				EDE6DCAD2203141800347D76 /* Device.swift */,
 				EDE6DCA72202E66000347D76 /* DeviceTableViewCell.swift */,
 				EDE6DCB22208360A00347D76 /* SwapButton.swift */,
-				EDCB56562202D91C0014EB3B /* Assets.xcassets */,
+				EDE6DCBE220C453100347D76 /* Assets.xcassets */,
 				EDE6DCB12203362A00347D76 /* Supporting Files */,
 			);
 			path = DevicesUI;
@@ -185,9 +185,9 @@
 			files = (
 				EDE6DCB522098DC300347D76 /* CustomHeaderView.xib in Resources */,
 				EDCB565A2202D91C0014EB3B /* LaunchScreen.storyboard in Resources */,
-				EDCB56572202D91C0014EB3B /* Assets.xcassets in Resources */,
 				EDCB56552202D91A0014EB3B /* Main.storyboard in Resources */,
 				EDE6DCBB220ABF1E00347D76 /* DeviceTableViewCell.xib in Resources */,
+				EDE6DCBF220C453100347D76 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
