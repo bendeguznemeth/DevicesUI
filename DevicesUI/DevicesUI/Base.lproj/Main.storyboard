@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Devices-->
+        <!--Devices View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="DevicesViewController" customModule="DevicesUI" customModuleProvider="target" sceneMemberID="viewController">
@@ -23,6 +23,41 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="D5Q-hI-6fr" userLabel="Table Header View">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="devices" translatesAutoresizingMaskIntoConstraints="NO" id="tPv-jb-jtV" userLabel="Devices">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="tPv-jb-jtV" secondAttribute="bottom" id="6AQ-gj-nTd"/>
+                                        <constraint firstAttribute="trailing" secondItem="tPv-jb-jtV" secondAttribute="trailing" id="Bsc-Jw-5d4"/>
+                                        <constraint firstItem="tPv-jb-jtV" firstAttribute="leading" secondItem="D5Q-hI-6fr" secondAttribute="leading" id="Vp8-Tv-eVx"/>
+                                        <constraint firstItem="tPv-jb-jtV" firstAttribute="top" secondItem="D5Q-hI-6fr" secondAttribute="top" id="fLJ-kz-X49"/>
+                                    </constraints>
+                                </view>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="sgs-XZ-bKs" userLabel="Table Footer View">
+                                    <rect key="frame" x="0.0" y="140" width="375" height="80"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The End" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="odA-QJ-hGY" userLabel="The End Label">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="odA-QJ-hGY" firstAttribute="top" secondItem="sgs-XZ-bKs" secondAttribute="top" id="2Yt-9x-foj"/>
+                                        <constraint firstItem="odA-QJ-hGY" firstAttribute="leading" secondItem="sgs-XZ-bKs" secondAttribute="leading" id="Jwo-q9-HyA"/>
+                                        <constraint firstAttribute="trailing" secondItem="odA-QJ-hGY" secondAttribute="trailing" id="OTB-gu-y4j"/>
+                                        <constraint firstAttribute="bottom" secondItem="odA-QJ-hGY" secondAttribute="bottom" constant="30" id="iZK-PP-798"/>
+                                    </constraints>
+                                </view>
                                 <sections/>
                             </tableView>
                         </subviews>
@@ -35,7 +70,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Devices" id="bvw-y2-7hk"/>
+                    <navigationItem key="navigationItem" id="bvw-y2-7hk"/>
                     <connections>
                         <outlet property="devicesTableView" destination="2hh-TK-MV8" id="TCw-Bh-DH1"/>
                     </connections>
@@ -94,4 +129,7 @@
             <point key="canvasLocation" x="53.600000000000001" y="26.53673163418291"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="devices" width="2683" height="1226"/>
+    </resources>
 </document>

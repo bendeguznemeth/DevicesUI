@@ -9,7 +9,7 @@
 import UIKit
 
 protocol DeviceCellDelegate {
-    func didTapSwap(stringToPresent: String?)
+    func didTapSwap(stringToPresent: String?, deviceType: DeviceType?)
 }
 
 struct DeviceTableViewCellContent {
@@ -31,6 +31,8 @@ class DeviceTableViewCell: UITableViewCell {
     @IBOutlet weak var blockedLabel: UILabel!
     @IBOutlet weak var innerView: UIView!
     
+    var deviceType: DeviceType?
+    
     var delegate: DeviceCellDelegate?
     
     override func awakeFromNib() {
@@ -43,7 +45,9 @@ class DeviceTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func displayContent(_ content: DeviceTableViewCellContent) {
+    func displayContent(_ content: DeviceTableViewCellContent, for deviceType: DeviceType) {
+        self.deviceType = deviceType
+        
         if let image = UIImage(named: content.deviceImageName) {
             self.deviceImageView.isHidden = false
             self.deviceImageView.image = image
@@ -59,6 +63,6 @@ class DeviceTableViewCell: UITableViewCell {
     }
     
     @IBAction func swapTapped(_ sender: UIButton) {
-        self.delegate?.didTapSwap(stringToPresent: self.swapButton.titleLabel?.text)
+        self.delegate?.didTapSwap(stringToPresent: self.swapButton.titleLabel?.text, deviceType: self.deviceType)
     }
 }
